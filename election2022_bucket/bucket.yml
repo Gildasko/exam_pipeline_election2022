@@ -1,6 +1,0 @@
-flows:
-  2920230b-7af9-4f94-b94e-10ee65b6bcd9: {ver: 3, file: Election_2022.snapshot, comments: next,
-    author: anonymous, created: 1672586755136, flowName: Election 2022, flowDesc: Election
-      2022 Collect and ingestion}
-layoutVer: 1
-bucketId: 418c0776-1916-4f5d-9762-ab607bb382e7
