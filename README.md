@@ -11,7 +11,7 @@ afin d'avoir des jeux de données exactes et plus fiables.
 
 #Collecte des données avec NIFI 
 
-![Nifi Flow](https://raw.githubusercontent.com/Gildasko/exam_pipeline_election2022/img/nifi.png)
+![Nifi Flow](https://raw.githubusercontent.com/Gildasko/exam_pipeline_election2022/img/un.png)
 
 On a conçu un pipeline de données avec Nifi en partant d'un processor ( invoqueHTTP) qui sera chargé de récupéré le flux de données directement sur le site 
 data.gouv. 
