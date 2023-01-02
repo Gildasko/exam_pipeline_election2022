@@ -6,8 +6,7 @@ faire une transformations des données ( tour1 et tout2 ) afin de savoir les ré
 appris en cours et préciser les outils externes pris en compte.
 
 Démarches : 
-On s'est référé au site data.gouv ( https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/ : pour le premier tour)
-afin d'avoir des jeux de données exactes et plus fiables. 
+On s'est référé au site data.gouv ( https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/ : pour le premier tour et https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/ : pour le second tour) afin d'avoir des jeux de données exactes et plus fiables. 
 ![Nifi Flow](img/trois.png)
 #Collecte des données avec NIFI 
 
