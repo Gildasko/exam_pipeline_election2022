@@ -36,15 +36,12 @@ test
 
 
 # INTEGRATION AIRFLOW - NIFI - SPARK
-Pour l'intégration entre airflow et spark , on a installé un provider spark dans airflow (apache-airflow-providers-apache-spark). Ensuite on a demarré le spark master
+Pour l'intégration entre airflow et spark , on a installé un provider spark dans airflow (*apache-airflow-providers-apache-spark*). Ensuite on a demarré le spark master
 afin de visualiser les jobs ou les task spark éxécutés à partir de airflow. (1)
-On a aussi creé la connection entre spark (spark_connect) (2)
-
-![Spark connect](img/spark_connect.png) (2)
+On a aussi creé la connection entre spark (spark_connect)
 
 ![spark](img/spark2.png)
 
-![spark](img/spark3.png)
 
 
 
