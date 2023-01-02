@@ -1,4 +1,4 @@
-# nifi_election2022
+# Exam Pipeline election2022
 
 # DATA COLLECT ( NIFI )
 Objectif : Collecter les informations liées aux élection présidentielle des 10 et 24 avril 2022 - Résultats définitifs , les analyser et faire 
