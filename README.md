@@ -57,7 +57,7 @@ Pour intégrer airflow et spark ; on vas d'abord installer un provider dans airf
 Au final , on pourra lancer nos dags via airflow et celui-ci pourra demarrer chaque processeur nifi (integration grâce a notre nifi_api.py). 
 Au dernier processeur (putfile ou publishtopickafka) , airflow pourra lancer un sparksubmitoperator afin de faire nos transformation.
 
-![airflow](img/save.png)
+![airflow](img/save1.png)
 
 Apres le lancement de notre dernier dag, on peut suivre les jobs sur l'interface spark master (demarrer au prealable le spark master). 
 
