@@ -11,8 +11,6 @@ On s'est référé au site data.gouv ( https://www.data.gouv.fr/fr/datasets/elec
 
 #Collecte des données avec NIFI 
 
-![Nifi Flow](img/un.png)
-
 On a conçu un pipeline de données avec Nifi en partant d'un processor ( invoqueHTTP) qui sera chargé de récupéré le flux de données directement sur le site 
 data.gouv. 
 
