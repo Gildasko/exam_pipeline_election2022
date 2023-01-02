@@ -25,25 +25,26 @@ de pouvoir le traiter dans spark.
 #Topic Kafka
 
 Le processeur Kafka reçoit aussi le flux de données pour l'afficher sur sa console. 
-
+![Nifi Flow](img/nifi2.png)
 # DATA TRANSFORM (SPARK)
 
-Démarches : 
-le but de cette partie est de transformer le fichier deu site data.gouv en un fichier plus structuré et plus facile à exploité
-
-# Header:
-D'abord on commence par lire le fichier avec le bon encodage "latin1" et le bon délimiteur ";". On remarque que le header du fichier est incomplet. Certaines colonnes n'ont pas d'header. On va donc leur crée un nom temporaire afin de pouvoir les manipuler. On va aussi donner des noms plus propices à certaines colonnes. 
-
-# Manipulation :
-
-
-
+test
 
 # GESTION DES TASKS (AIRFLOW)
 
-![Nifi Flow](img/airflow.png)
+![airflow](img/airflow.png)
 
 
 # INTEGRATION AIRFLOW - NIFI - SPARK
+Pour l'intégration entre airflow et spark , on a installé un provider spark dans airflow (apache-airflow-providers-apache-spark). Ensuite on a demarré le spark master
+afin de visualiser les jobs ou les task spark éxécutés à partir de airflow. (1)
+On a aussi creé la connection entre spark (spark_connect) (2)
+
+![Spark connect](img/spark_connect.png) (2)
+
+![spark](img/spark2.png)
+
+![spark](img/spark3.png)
+
 
 
