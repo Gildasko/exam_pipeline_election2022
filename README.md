@@ -8,7 +8,6 @@ appris en cours et préciser les outils externes pris en compte.
 Démarches : 
 On s'est référé au site data.gouv ( https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-1er-tour/ : pour le premier tour et https://www.data.gouv.fr/fr/datasets/election-presidentielle-des-10-et-24-avril-2022-resultats-definitifs-du-2nd-tour/ : pour le second tour) afin d'avoir des jeux de données exactes et plus fiables. 
 ![Nifi Flow](img/trois.png)
-
 #Collecte des données avec NIFI 
 
 ![Nifi Flow](img/un.png)
@@ -26,23 +25,26 @@ de pouvoir le traiter dans spark.
 #Topic Kafka
 
 Le processeur Kafka reçoit aussi le flux de données pour l'afficher sur sa console. 
-![Nifi Flow](img/nifi2.png)
+
 # DATA TRANSFORM (SPARK)
 
-test
+Démarches : 
+le but de cette partie est de transformer le fichier deu site data.gouv en un fichier plus structuré et plus facile à exploité
+
+#Header :
+D'abord on commence par lire le fichier avec le bon encodage "latin1" et le bon délimiteur ";". On remarque que le header du fichier est incomplet. Certaines colonnes n'ont pas d'header. On va donc leur crée un nom temporaire afin de pouvoir les manipuler. On va aussi donner des noms plus propices à certaines colonnes. 
+
+#Manipulation :
+On va déja supprimer toutes les colonnes qu'on juge inutiles. Par la suite on va changer la structure du dataframe. Le dataframe initial est bâti de façon à ce que sur chaque ligne, on a une "clé" (département, circonscription, commune, bureau de vote) unique avec tous les candidats et leurs voix. Ce qui entraine un dataframe avec plus de 100 colonnes ce qui n'est pas pratique.
+On a préféré créer une colonne "code" ou on a concaténé (département, circonscription, commune, bureau de vote). Par là suite on crée plusieurs dataframes avec ce code, le prénom, le nom et le nombre de voix de chaque candidat. On "union" ces dataframes puis on join, grâce au "code", avec le dataframe initial en sélectionnant les colonnes qui nous intéressent. On obtient donc un dataframe qui a beaucoup plus de colonnes certes, mais ne dépasse pas les 20 colonnes.
+Il nous reste à "Order By" ces colonnes pour mieux visualiser notre dataframe. on choisit donc de trier par ordre croissant en fonction d'abord du code et puis du nom des candidats.
+Pour terminer on "split" ce qu'on a concaténé pour reavoir nos colonnes de base et puis on écrit le dataframe dans un nouveau fichier.
 
 # GESTION DES TASKS (AIRFLOW)
 
-![airflow](img/airflow.png)
+![Nifi Flow](img/airflow.png)
 
 
 # INTEGRATION AIRFLOW - NIFI - SPARK
-Pour l'intégration entre airflow et spark , on a installé un provider spark dans airflow (*apache-airflow-providers-apache-spark*). Ensuite on a demarré le spark master
-afin de visualiser les jobs ou les task spark éxécutés à partir de airflow. (1)
-On a aussi creé la connection entre spark (spark_connect)
-
-![spark](img/spark2.png)
-
-
 
 
