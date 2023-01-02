@@ -28,7 +28,16 @@ Le processeur Kafka reçoit aussi le flux de données pour l'afficher sur sa con
 
 # DATA TRANSFORM (SPARK)
 
-test
+Démarches : 
+le but de cette partie est de transformer le fichier deu site data.gouv en un fichier plus structuré et plus facile à exploité
+
+# Header:
+D'abord on commence par lire le fichier avec le bon encodage "latin1" et le bon délimiteur ";". On remarque que le header du fichier est incomplet. Certaines colonnes n'ont pas d'header. On va donc leur crée un nom temporaire afin de pouvoir les manipuler. On va aussi donner des noms plus propices à certaines colonnes. 
+
+# Manipulation :
+
+
+
 
 # GESTION DES TASKS (AIRFLOW)
 
