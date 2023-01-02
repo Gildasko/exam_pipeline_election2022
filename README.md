@@ -63,5 +63,12 @@ Apres le lancement de notre dernier dag, on peut suivre les jobs sur l'interface
 
 ![spark](img/spark2.png)
 
+# CONCLUSION
+
+Après transformation de nos jeux de données récupéré sur data.gouv , on peut savoir la repartitions des voix par candidat. On pourra ainsi voir les zones oû
+tel candidat peut faire plus de campagnes. Les données en fin de format sont sous csv ( datatour1 pour le tour1 et datatour2 pour le tour2) nous donne les informations
+par commune , par circonscription et par bureau de vote.
+
+
 
 
