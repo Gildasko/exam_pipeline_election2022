@@ -52,7 +52,7 @@ On utilise cette architecture pour paralléliser notre travail en deux parties, 
 
 Pour intégrer airflow et spark ; on vas d'abord installer un provider dans airflow ( *apache-airflow-providers-apache-spark* ) et ensuite configurer la connection ( spark_connect).
 
-![AirFlow](img/spark_connect.png)
+![AirFlow](img/spark_conn.png)
 
 Au final , on pourra lancer nos dags via airflow et celui-ci pourra demarrer chaque processeur nifi (integration grâce a notre nifi_api.py). 
 Au dernier processeur (putfile ou publishtopickafka) , airflow pourra lancer un sparksubmitoperator afin de faire nos transformation.
