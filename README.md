@@ -25,7 +25,7 @@ de pouvoir le traiter dans spark.
 #Topic Kafka
 
 Le processeur Kafka reçoit aussi le flux de données pour l'afficher sur sa console. 
-
+![Nifi Flow](img/nifi2.png)
 # DATA TRANSFORM (SPARK)
 
 Démarches : 
@@ -46,8 +46,22 @@ On a utilisé AIRFLOW pour orchester nos tasks. Dans notre cas, les tasks se ré
 Il suffit donc juste de mettre un trigger sur AIRFLOW et le processus est automatique de bout en bout. Le AIRFLOW met en marche les processeurs nifi qui importent les fichiers puis les scripts spark vont transformer ces derniers.   
 On utilise cette architecture pour paralléliser notre travail en deux parties, le premier tour et le deuxième :
 
-![Nifi Flow](img/airflow.png)
+![airflow](img/airflow.png)
 
 # INTEGRATION AIRFLOW - NIFI - SPARK
+
+Pour intégrer airflow et spark ; on vas d'abord installer un provider dans airflow ( *apache-airflow-providers-apache-spark* ) et ensuite configurer la connection ( spark_connect).
+
+![AirFlow](img/spark_connect.png)
+
+Au final , on pourra lancer nos dags via airflow et celui-ci pourra demarrer chaque processeur nifi (integration grâce a notre nifi_api.py). 
+Au dernier processeur (putfile ou publishtopickafka) , airflow pourra lancer un sparksubmitoperator afin de faire nos transformation.
+
+![airflow](img/spark_connect.png)
+
+Apres le lancement de notre dernier dag, on peut suivre les jobs sur l'interface spark master (demarrer au prealable le spark master). 
+
+![spark](img/spark2.png)
+
 
 
