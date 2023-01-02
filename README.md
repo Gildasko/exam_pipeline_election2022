@@ -42,7 +42,7 @@ Pour terminer on "split" ce qu'on a concaténé pour reavoir nos colonnes de bas
 
 # GESTION DES TASKS (AIRFLOW)
 
-On a utilisé AIRFLOW pour orchester nos tasks. Dans notre cas, les tasks se résument à lancer les processeurs nifi un par un, dans l'ordre et puis une fois que les processeurs tous lancés et puis stoppés. On peut lancer la task qui lance le script spark.
+On a utilisé AIRFLOW pour orchester nos tasks. Dans notre cas, les tasks se résument à lancer les processeurs nifi un par un, dans l'ordre ou en simultané. Une fois que les processeurs tous lancés et puis stoppés. On peut lancer la task qui lance le script spark.
 Il suffit donc juste de mettre un trigger sur AIRFLOW et le processus est automatique de bout en bout. Le AIRFLOW met en marche les processeurs nifi qui importent les fichiers puis les scripts spark vont transformer ces derniers.   
 On utilise cette architecture pour paralléliser notre travail en deux parties, le premier tour et le deuxième :
 
