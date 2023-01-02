@@ -32,6 +32,9 @@ Le processeur Kafka reçoit aussi le flux de données pour l'afficher sur sa con
 
 # GESTION DES TASKS (AIRFLOW)
 
+![Nifi Flow](img/airflow.png)
+
+
 # INTEGRATION AIRFLOW - NIFI - SPARK
 
 
