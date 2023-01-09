@@ -118,7 +118,7 @@ def parse_state(json_obj, state_key: str):
 def collectFile1():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "3bfcc224-0185-1000-41b9-52f6de1c127d" 
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     processor = get_processor(url_nifi_api, processor_id, token)
