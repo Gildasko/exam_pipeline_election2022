@@ -129,7 +129,7 @@ def collectFile1():
 def collectFile2():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "3caf2f1c-0185-1000-d6a1-172c6002053d"
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     processor = get_processor(url_nifi_api, processor_id, token)
@@ -140,7 +140,7 @@ def collectFile2():
 def updateAttribute1():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "3fa17b01-0185-1000-e9f9-ed41fd55947b"
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     get_processor(url_nifi_api, processor_id, token)
@@ -149,7 +149,7 @@ def updateAttribute1():
 def updateAttribute2():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "418398a3-0185-1000-9820-441fe5ac4453"
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     get_processor(url_nifi_api, processor_id, token)
@@ -158,7 +158,7 @@ def updateAttribute2():
 def putFile1():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "3c20085a-0185-1000-e44a-81beaec69ec7"
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     get_processor(url_nifi_api, processor_id, token)
@@ -168,7 +168,7 @@ def putFile1():
 def putFile2():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "41850f56-0185-1000-08da-a9a14950dd31"
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     get_processor(url_nifi_api, processor_id, token)
@@ -178,7 +178,7 @@ def putFile2():
 def publishFile1():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "510e644f-0185-1000-3a16-c5bf7f101708"
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     get_processor(url_nifi_api, processor_id, token)
@@ -187,7 +187,7 @@ def publishFile1():
 def publishFile2():
     url_nifi_api ="https://127.0.0.1:8443/nifi-api/"
     processor_id = "632c0bad-0185-1000-b0a9-a3156f05ee35"
-    access_payload = {"username" : "gildas","password" : "KsadligVIC07@"}
+    access_payload = {"username" : "gildas","password" : "***"}
 
     token = get_token(url_nifi_api, access_payload)
     get_processor(url_nifi_api, processor_id, token)
